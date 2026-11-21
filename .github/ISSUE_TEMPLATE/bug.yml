@@ -1,0 +1,42 @@
+name: Erro no conteúdo
+description: Link quebrado, inconsistência entre capítulos, número divergente ou detalhe que possa identificar alguém.
+title: "fix: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Obrigado por avisar. **Não escreva nomes reais de empresas, clientes ou pessoas nesta issue**, mesmo para apontar um vazamento: descreva onde está o trecho (arquivo e seção) e o tipo de problema.
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Tipo de problema
+      options:
+        - Possível detalhe identificável (anonimização)
+        - Número ou fato divergente entre capítulos ou artigo
+        - Link ou âncora quebrada
+        - Diagrama errado ou ilegível
+        - Texto confuso ou erro de português
+    validations:
+      required: true
+  - type: input
+    id: location
+    attributes:
+      label: Onde
+      description: Arquivo e seção.
+      placeholder: case/06-migracao-de-dados.md, seção "Corte e plano de volta"
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: O que está errado
+      description: Descreva o problema sem repetir dados sensíveis.
+    validations:
+      required: true
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Sugestão de correção
+    validations:
+      required: false
