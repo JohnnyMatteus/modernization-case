@@ -15,7 +15,7 @@ Ao mesmo tempo, o esqueleto precisa ir para a `main` agora, ainda vazio, para qu
 
 - O script [`scripts/check-placeholders.sh`](../../scripts/check-placeholders.sh) falha se encontrar, no conteúdo publicável (`case/`, `docs/artigo-linkedin.md` e `docs/roteiros/`), qualquer um dos dois marcadores:
   - `<!-- PREENCHER:`;
-  - `Exemplo ilustrativo`.
+  - `Exemplo ilustrativo, substituir` (o rótulo dos exemplos, sem diferenciar maiúsculas).
 - O CI tem um job `placeholders` que roda esse script apenas em push para a `main` ou em PR para a `main`, e **somente quando a variável de repositório `ENFORCE_PLACEHOLDER_GATE` é `true`**. Sem a variável, o job aparece como "skipped".
 - O script também roda localmente em modo informativo (`--report`), que lista as pendências sem falhar, para acompanhar o progresso.
 

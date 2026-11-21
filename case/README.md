@@ -2,6 +2,8 @@
 
 <!-- PREENCHER: título definitivo do case, sem nome de empresa nem de produto. Ex. de formato: "Do monólito de N anos a serviços independentes sem parar a operação". -->
 
+<!-- PREENCHER: remova este aviso de status quando o case estiver completo e revisado. -->
+
 > **Status do case:** esqueleto. Os capítulos abaixo têm perguntas-guia, campos `PREENCHER` e exemplos ilustrativos que **não são fatos**. Nada aqui deve ser lido como resultado real até que o autor substitua cada exemplo.
 
 ## Resumo executivo
