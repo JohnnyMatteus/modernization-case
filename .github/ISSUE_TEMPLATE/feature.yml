@@ -1,0 +1,36 @@
+name: Sugestão de conteúdo
+description: Pergunta que o case deveria responder, capítulo novo, diagrama ou melhoria no artigo e no roteiro.
+title: "feat: "
+labels: [enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Sugestões de leitores ajudam a deixar o case mais útil. Lembre que o case conta uma experiência real: sugestões que pedem fatos novos dependem do que o autor pode publicar.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Área
+      options:
+        - Capítulo do case
+        - Diagrama
+        - Métricas
+        - Artigo do LinkedIn
+        - Roteiro de entrevista
+        - Repositório (CI, templates, guias)
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: Que pergunta ficou sem resposta?
+      description: O que você queria saber ao ler e não encontrou.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposta
+      description: Onde e como o conteúdo poderia entrar.
+    validations:
+      required: false

@@ -1,0 +1,19 @@
+{
+  // Regras do markdownlint: https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md
+  "config": {
+    "default": true,
+    // Texto corrido em português: quebra de linha por parágrafo, não por coluna.
+    "MD013": false,
+    // Títulos repetidos são permitidos em seções diferentes (ex.: "Sua resposta").
+    "MD024": { "siblings_only": true },
+    // Comentários HTML são os marcadores PREENCHER; <br/> é usado em rótulos Mermaid.
+    "MD033": { "allowed_elements": ["br"] },
+    // Listas com marcador "-" em todo o repositório.
+    "MD004": { "style": "dash" },
+    // Ênfase e negrito com asterisco.
+    "MD049": { "style": "asterisk" },
+    "MD050": { "style": "asterisk" }
+  },
+  "globs": ["**/*.md"],
+  "ignores": ["node_modules/**", "rascunhos/**"]
+}

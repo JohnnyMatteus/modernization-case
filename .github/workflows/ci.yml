@@ -1,0 +1,65 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+env:
+  MARKDOWNLINT_CLI2_VERSION: 0.24.2
+  LYCHEE_IMAGE: lycheeverse/lychee:0.24.2
+
+jobs:
+  markdownlint:
+    name: Lint de Markdown
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: markdownlint-cli2
+        run: npx --yes "markdownlint-cli2@${MARKDOWNLINT_CLI2_VERSION}"
+
+  links:
+    name: Links internos
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: lychee (offline, links e âncoras entre arquivos)
+        run: >-
+          docker run --rm -v "$PWD":/input -w /input "$LYCHEE_IMAGE"
+          --config lychee.toml --offline '**/*.md'
+
+  scripts:
+    name: Lint e teste dos scripts
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: shellcheck
+        run: shellcheck scripts/*.sh
+      - name: Relatório de pendências (informativo, não falha)
+        run: ./scripts/check-placeholders.sh --report
+
+  # Portão de pendências: falha se houver marcadores PREENCHER ou exemplos
+  # ilustrativos no conteúdo publicável. Desligado por padrão, porque o case
+  # ainda está sendo preenchido. Para ligar, crie a variável de repositório
+  # ENFORCE_PLACEHOLDER_GATE=true (Settings > Secrets and variables > Actions >
+  # Variables). Ver docs/adr/0003-portao-de-pendencias-desligado-por-padrao.md.
+  placeholders:
+    name: Portão de pendências (main)
+    if: >-
+      vars.ENFORCE_PLACEHOLDER_GATE == 'true' &&
+      (github.ref == 'refs/heads/main' || github.base_ref == 'main')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Nenhuma pendência no conteúdo publicável
+        run: ./scripts/check-placeholders.sh
