@@ -64,3 +64,7 @@
 > | Tempo de recuperação | cerca de 3 h | cerca de 20 min | mesmo | Postmortems de severidade alta; antes eram reconstruídos a partir de tickets |
 >
 > Limitação: o volume de pedidos dobrou entre os dois períodos, então o custo de infraestrutura é mostrado por pedido, e não em valor total.
+
+---
+
+[← Riscos](07-riscos.md) · [Índice](README.md) · [Resultados →](09-resultados.md)

@@ -37,3 +37,7 @@
 > | Roadmap ativo | Produto não aceitava congelar features por mais de duas semanas | Toda feature nova passou a nascer fora do monólito |
 >
 > A restrição mais difícil foi o time dividido: cada incidente no legado parava a modernização por dias, o que nos levou a investir primeiro em observabilidade do monólito.
+
+---
+
+[← Contexto](01-contexto.md) · [Índice](README.md) · [Estratégia →](03-estrategia.md)

@@ -76,3 +76,7 @@ Copie o bloco abaixo para cada decisão. Mantenha cada uma em no máximo 15 linh
 > - **Decisão:** gravar o evento numa tabela de outbox na mesma transação do pedido, com um relay que publica na fila e marca como enviado.
 > - **Alternativas:** dupla escrita (descartada por inconsistência); CDC lendo o binlog (descartada pelo custo operacional naquele momento, com o time pequeno).
 > - **Consequências:** entrega pelo menos uma vez, o que obrigou os consumidores a serem idempotentes; mais uma tabela para manter no legado; latência extra de alguns segundos, aceita pelo negócio.
+
+---
+
+[← Estratégia](03-estrategia.md) · [Índice](README.md) · [Arquitetura →](05-arquitetura.md)

@@ -40,3 +40,7 @@
 > | Time absorvido por incidentes do legado | Alta | Médio | Rodízio semanal de plantão do legado, protegendo o restante do time | Sim |
 >
 > O risco que se materializou: um desconto progressivo calculado só em um relatório legado não foi coberto pelos testes de caracterização. O canário com 5% do tráfego mostrou a diferença em duas horas; voltamos a rota pela flag e incluímos o caso na suíte antes de tentar de novo.
+
+---
+
+[← Migração de dados](06-migracao-de-dados.md) · [Índice](README.md) · [Métricas →](08-metricas.md)

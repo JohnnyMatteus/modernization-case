@@ -33,3 +33,7 @@
 > | --- | --- | --- |
 > | Extraímos serviços antes de separar módulos dentro do monólito | Começaria com um monólito modular, com fronteiras validadas por testes de arquitetura, e só depois extrairia | Duas fronteiras mudaram depois da extração e custaram retrabalho de contrato e de dados |
 > | Deixamos a observabilidade do legado para a segunda fase | Instrumentaria o legado na primeira semana | Os primeiros cortes foram avaliados por impressão, sem linha de base confiável |
+
+---
+
+[← Lições](10-licoes.md) · [Índice](README.md)

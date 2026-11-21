@@ -44,3 +44,7 @@
 ## Exemplo ilustrativo
 
 > **Exemplo ilustrativo, substituir.** O sistema era um monólito PHP 5.6 com framework próprio, usado pela operação para registrar pedidos de clientes corporativos, faturar e avisar transportadoras. Rodava em duas VMs com um único banco MySQL de cerca de 400 tabelas. Os sintomas: deploy quinzenal com janela noturna e roteiro manual de 30 passos; uma suíte de testes que cobria menos de 10% do código e levava 40 minutos; e incidentes em que um relatório pesado travava a emissão de notas. O gatilho foi um contrato novo que triplicaria o volume de pedidos em seis meses. Entrei como tech lead com a tarefa de propor um plano que não parasse a operação.
+
+---
+
+[Índice](README.md) · [Restrições →](02-restricoes.md)

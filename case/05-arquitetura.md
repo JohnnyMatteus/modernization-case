@@ -79,3 +79,7 @@ flowchart LR
 ## Exemplo ilustrativo
 
 > **Exemplo ilustrativo, substituir.** Antes, um único processo PHP servia a interface da operação, a API dos parceiros e os jobs de faturamento, todos lendo e escrevendo nas mesmas tabelas. O ponto mais caro era o job noturno de faturamento, que travava tabelas usadas pela API. Na transição, que durou sete meses, um gateway passou a desviar a API de parceiros para dois serviços novos, e o monólito publicava eventos de pedido numa fila. No fim, o monólito ficou só com o back-office interno, de baixo tráfego, e cada serviço novo passou a ter banco próprio.
+
+---
+
+[← Decisões](04-decisoes.md) · [Índice](README.md) · [Migração de dados →](06-migracao-de-dados.md)

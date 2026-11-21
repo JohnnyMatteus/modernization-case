@@ -35,3 +35,7 @@
 > **Exemplo ilustrativo, substituir.**
 >
 > **Testes de caracterização antes de qualquer extração.** Gravar entradas e saídas reais do legado e usá-las como suíte de regressão do serviço novo achou mais divergências do que toda a documentação que conseguimos levantar (ver [riscos](07-riscos.md)). Não vale para módulos com saída não determinística, como os que dependem de horário ou sorteio, sem antes isolar essas fontes.
+
+---
+
+[← Resultados](09-resultados.md) · [Índice](README.md) · [O que faria diferente →](11-o-que-faria-diferente.md)

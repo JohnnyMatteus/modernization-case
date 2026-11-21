@@ -64,3 +64,7 @@ sequenceDiagram
 ## Exemplo ilustrativo
 
 > **Exemplo ilustrativo, substituir.** Para pedidos, fizemos uma carga inicial de cerca de 30 milhões de linhas em lotes noturnos ao longo de uma semana, seguida de sincronização por eventos com outbox. Por um mês o legado seguiu como dono da verdade e o serviço novo só lia; um job diário comparava contagens por dia e checksums de 1% dos pedidos. A reconciliação achou pedidos com fuso horário gravado errado desde a origem, que corrigimos na transformação e não no legado. O corte de escrita aconteceu numa janela de 10 minutos, com rollback por flag testado duas vezes em homologação e nunca usado em produção.
+
+---
+
+[← Arquitetura](05-arquitetura.md) · [Índice](README.md) · [Riscos →](07-riscos.md)

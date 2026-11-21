@@ -39,3 +39,7 @@
 ## Exemplo ilustrativo
 
 > **Exemplo ilustrativo, substituir.** O contrato novo entrou no prazo e o volume triplicado passou pelos serviços novos sem incidente de severidade alta nos três primeiros meses. Para o time, o efeito mais visível foi o fim da janela noturna de deploy. Não entregamos a extração do back-office, que segue no monólito por ter baixo tráfego e regras pouco documentadas; o custo novo foi ter que manter três pipelines e um gateway. Minha parte foi propor a estratégia, escrever as decisões de dados e conduzir os cortes; a extração dos serviços foi feita pelo time inteiro.
+
+---
+
+[← Métricas](08-metricas.md) · [Índice](README.md) · [Lições →](10-licoes.md)

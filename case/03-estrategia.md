@@ -58,3 +58,7 @@ timeline
 ## Exemplo ilustrativo
 
 > **Exemplo ilustrativo, substituir.** Descartamos a reescrita total porque o roadmap não podia parar por um ano e ninguém conhecia todas as regras de faturamento. Escolhemos strangler fig na borda, com um gateway desviando rotas HTTP para os serviços novos, e branch by abstraction no núcleo de cálculo de frete, que era chamado por dentro do monólito e não tinha rota própria. A primeira fatia foi notificações: baixo risco, pouco acoplamento e um bom terreno para validar o pipeline e a observabilidade. Uma fatia só era considerada pronta depois de 14 dias com 100% do tráfego no serviço novo e nenhuma escrita do legado nas tabelas dela.
+
+---
+
+[← Restrições](02-restricoes.md) · [Índice](README.md) · [Decisões →](04-decisoes.md)
