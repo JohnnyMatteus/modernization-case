@@ -1,0 +1,9 @@
+# Configuração do lychee: https://lychee.cli.rs/
+# Roda com --offline (no CI e localmente): verifica só links e âncoras entre
+# arquivos do repositório. Links externos (GitHub, LinkedIn) não são acessados.
+# Versão fixada em 0.24.2 (imagem Docker lycheeverse/lychee:0.24.2).
+
+offline = true
+include_fragments = "anchor-only"
+no_progress = true
+exclude_path = ["node_modules", "rascunhos"]
